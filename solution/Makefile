@@ -15,6 +15,12 @@ mc-acc: CFLAGS=-g -Wall -acc -Minfo=accel -ta=tesla:managed
 mc-acc: CLIBS=-lm -lnvToolsExt
 mc-acc: monte-carlo-pi-openacc.c
 	${CC} ${CFLAGS} -o monte-carlo-pi-openacc monte-carlo-pi-openacc.c ${CLIBS}
+    
+mc-cuda: CC=nvcc
+mc-cuda: CFLAGS=-g  -Xcompiler -Wall  
+mc-cuda: CLIBS=-lm -lnvToolsExt
+mc-cuda: monte-carlo-pi-cuda.cu
+	${CC} ${CFLAGS} -o monte-carlo-pi-cuda monte-carlo-pi-cuda.cu ${CLIBS}
 
 mc-mpi: CC=mpicc
 mc-mpi: CFLAGS=-g -Wall

@@ -1,7 +1,7 @@
 /* =================================================================
 monte-carlo-pi-openmp.c
 
-Written by Frederick Fung for NCI-UNSW Parallel Programing Workshop Mar 2023
+Written by Frederick Fung for NCI-Monash Parallel Programing Workshop Jul 2023
 
 This program approximates the pi value by Monte-Carlo method. 
 

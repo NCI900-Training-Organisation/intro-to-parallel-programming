@@ -17,7 +17,7 @@ mc-acc: monte-carlo-pi-openacc.c
 	${CC} ${CFLAGS} -o monte-carlo-pi-openacc monte-carlo-pi-openacc.c ${CLIBS}
     
 mc-cuda: CC=nvcc
-mc-cuda: CFLAGS=-g  -Xcompiler -Wall  
+mc-cuda: CFLAGS=-g -arch=sm_70 -Xcompiler -Wall  
 mc-cuda: CLIBS=-lm -lnvToolsExt
 mc-cuda: monte-carlo-pi-cuda.cu
 	${CC} ${CFLAGS} -o monte-carlo-pi-cuda monte-carlo-pi-cuda.cu ${CLIBS}

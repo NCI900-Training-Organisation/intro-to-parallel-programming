@@ -15,7 +15,7 @@
 #PBS -M frederick.fung@anu.edu.au
 #PBS -l wd
 
-#module load openmpi/4.0.7
+#module load openmpi/4.1.5
 module load nvidia-hpc-sdk/22.5  
 #export OMP_NUM_THREADS=6
 

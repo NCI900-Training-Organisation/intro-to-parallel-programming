@@ -7,13 +7,13 @@
 #PBS -l mem=10GB
 #PBS -l walltime=00:02:00 
 
-#PBS -N parallel
+#PBS -N MPI
 
 
 
 module load python3/3.11.0
 module load papi/7.0.1
-module load openmpi/4.1.4
+module load openmpi/4.0.1
 
 . /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
 

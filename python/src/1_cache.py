@@ -13,14 +13,14 @@ papi.start(evs)
 
 arr1 = np.array([3, 2, 1])
 arr2 = np.array([1, 2, 3])
-out_arr = np.add(arr1, arr2)
+np.add(arr1, arr2)
 
 result = papi.stop(evs)
 print(result)
 
 papi.start(evs)
 
-out_arr = np.add(arr1, arr2)
+np.add(arr1, arr2)
 
 result = papi.stop(evs)
 

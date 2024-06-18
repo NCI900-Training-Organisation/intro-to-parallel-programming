@@ -11,17 +11,69 @@ Prerequisite:
 1. Experience with Python.
 2. Experience with bash or similar unix shells.
 
+Modules:
+1. python3/3.11.0
+2. papi/7.0.1
+
+Python Packages (in order of installation):
+1. python-papi
+2. numpy
+
+
 ## High-level HPC Architecture
 
 ![](figs/HPC_overview.drawio.png)
 
 ### Requesting a Job
 
+1. Which project are you using?
+2. Which job queue are you planning to use?
+3. How many CPU cores are required for your task?
+4. How many GPUs do you need?
+5. What is the estimated runtime of your program?
+6. Which modules are necessary to execute the program?
+7. What script or command will you use to run the program?
+
+```
+
+#!/bin/bash
+
+#PBS -P vp91
+#PBS -q normal
+
+#PBS -l ncpus=48
+#PBS -l mem=10GB
+#PBS -l walltime=00:02:00
+
+#PBS -N testScript
+
+
+
+module load python3/3.11.0
+module load papi/7.0.1
+
+. /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
+
+which python
+
+```
+
+```
+cd python/jobScripts
+qsub 1_testScript.pbs
+```
+
 
 
 ## HPC Compute Node
 
 ![](figs/computeNode.drawio.png)
+
+```
+qsub 2_cachePapi.pbs
+```
+
+## How does cache influence peformance?
 
 ## Vector Parallelism
 
@@ -36,12 +88,3 @@ Prerequisite:
 
 ![](figs/multinodePrallelism.drawio.png)
 
-
-
-
-
-```
-
-from dask_jobqueue import PBSCluster
-
-```

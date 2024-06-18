@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#PBS -P vp91
+#PBS -q normal
+
+#PBS -l ncpus=48
+#PBS -l mem=10GB
+#PBS -l walltime=00:02:00 
+
+#PBS -N parallel
+
+
+
+module load python3/3.11.0
+module load papi/7.0.1
+module load openmpi/4.1.4
+
+. /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
+
+mpirun -np 4 python3 /scratch/vp91/$USER/intro-to-parallel-programming/python/src/4_mpi.py

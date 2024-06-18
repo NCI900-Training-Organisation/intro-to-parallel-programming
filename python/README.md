@@ -14,12 +14,14 @@ Prerequisite:
 Modules:
 1. python3/3.11.0
 2. papi/7.0.1
+3. openmpi/4.1.4
 
 Python Packages (in order of installation):
 1. python-papi
 2. numpy
 3. codetiming
 4. numba
+5. mpi4py
 
 
 ## High-level HPC Architecture

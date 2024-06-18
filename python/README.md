@@ -69,11 +69,13 @@ qsub 1_testScript.pbs
 
 ![](figs/computeNode.drawio.png)
 
+## How does cache influence peformance?
+
 ```
 qsub 2_cachePapi.pbs
 ```
 
-## How does cache influence peformance?
+
 
 ## Vector Parallelism
 

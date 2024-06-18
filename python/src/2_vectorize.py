@@ -4,11 +4,11 @@ from numba import vectorize, float64
 import time
 from codetiming import Timer
 
-@Timer(name="without_vectorization", text="CPU time (without_vectorization): {milliseconds:.0f} ms")
+@Timer(name="without_vectorization", text="CPU time (without vectorization): {milliseconds:.0f} ms")
 def without_vectorization(a: float, b: float) -> float:
     return np.cos(np.sqrt(a**2 + b**2) + 100 + np.sin(b))
 
-@Timer(name="with_vectorization", text="CPU time (with_vectorization): {milliseconds:.0f} ms")
+@Timer(name="with_vectorization", text="CPU time (with vectorization): {milliseconds:.0f} ms")
 @vectorize([float64(float64, float64)]) 
 def with_vectorization(a: float, b: float) -> float:
     return np.cos(np.sqrt(a**2 + b**2) + 100 + np.sin(b))

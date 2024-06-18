@@ -18,6 +18,8 @@ Modules:
 Python Packages (in order of installation):
 1. python-papi
 2. numpy
+3. codetiming
+4. numba
 
 
 ## High-level HPC Architecture
@@ -60,7 +62,7 @@ which python
 
 ```
 cd python/jobScripts
-qsub 1_testScript.pbs
+qsub 0_testScript.pbs
 ```
 
 
@@ -71,15 +73,27 @@ qsub 1_testScript.pbs
 
 ## How does cache influence peformance?
 
+As the data size increases, cache misses also increase, leading to performance degradation.
+
 ```
-qsub 2_cachePapi.pbs
+qsub 1_cachePapi.pbs
 ```
+
+Are you getting linear peformance for third and fourth call?
 
 
 
 ## Vector Parallelism
 
 ![](figs/vectorPrallelism.drawio.png)
+
+### How does vectorization influence peformance?
+
+We will use `Numba` to vectorrize python code.
+
+```
+qsub 2_vectorize.pbs
+```
 
 ## Multi-core Parallelism
 

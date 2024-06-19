@@ -1,27 +1,45 @@
 import numpy as np
 import numba
-from numba import njit, prange
+from numba import njit, prange, cuda
+
+import math
 
 import time
 from codetiming import Timer
 
 
+@Timer(name="increment_using_cuda", text="CPU time with cuda (launch time): {milliseconds:.0f} ms")
+@cuda.jit
+def increment_using_cuda(an_array):
+    # Thread id in a 1D block
+    tx = cuda.threadIdx.x
+    # Block id in a 1D grid
+    ty = cuda.blockIdx.x
+    # Block width, i.e. number of threads per block
+    bw = cuda.blockDim.x
+    # Compute flattened index inside the array
+    pos = tx + ty * bw
+    if pos < an_array.size:  # Check array boundaries
+        an_array[pos] += 1
 
-@Timer(name="without_parallelization", text="CPU time (without parallelization): {milliseconds:.0f} ms")
-def without_parallelization(a: float, b: float) -> float:
-    return np.cos(np.sqrt(a**2 + b**2) + 100 + np.sin(b))
 
-@Timer(name="with_parallelization", text="CPU time (with parallelization): {milliseconds:.0f} ms")
-@numba.jit(nopython=True, parallel=True)
-def with_parallelization(a: float, b: float) -> float:
-    return np.cos(np.sqrt(a**2 + b**2) + 100 + np.sin(b))
+@Timer(name="increment_using_numpy", text="CPU time without cuda: {milliseconds:.0f} ms")
+def increment_using_numpy(an_array):
+    new_array = li = [i+1 for i in an_array]
 
-a = np.array([n for n in range(10_000_000)])
-b = np.array([n for n in range(10_000_000)])
 
-without_parallelization(a, b)
+arrayA = np.array([n for n in range(10_000_000)])
 
-# In Numba the first call will not give good performance
-# This is because, first call always involves code transformations
-with_parallelization(a, b)
-with_parallelization(a, b)
+increment_using_numpy(arrayA)
+
+threadsperblock = (32, 32)
+blockspergrid_x = math.ceil(arrayA.shape[0] / threadsperblock[0])
+blockspergrid_y = math.ceil(arrayA.shape[1] / threadsperblock[1])
+blockspergrid = (blockspergrid_x, blockspergrid_y)
+
+evtstart = numba.cuda.event(timing=True)
+increment_using_cuda[blockspergrid, threadsperblock](arrayA)
+evtend = numba.cuda.event(timing=True)
+elapsed_time = numba.cuda.event_elapsed_time(evtstart, evtend)
+
+print("Time with cuda: " + str(elapsed_time))

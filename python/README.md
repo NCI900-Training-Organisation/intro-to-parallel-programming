@@ -1,29 +1,28 @@
 # Introduction to Parallel Programming Using Python
 This repository provides an introduction to the concepts of parallel programming using Python.
 
-Learning outcomes of the tutorial are:
+**Learning outcomes of the tutorial are:**
 1. Learn the basic concepts of parallel programming.
-2. Learn the different hardware components that make up an HPC machine. 
-3. Learn how an HPC machine is organized.
-4. Learn how to submit a Job to a PBS batch scheduler. 
+2. Learn how an HPC machine is organized.
+3. Learn how to submit a Job to a PBS batch scheduler. 
+4. Learn the different hardware components that make up an HPC machine. 
 
-Prerequisite:
+**Prerequisite:**
 1. Experience with Python.
 2. Experience with bash or similar Unix shells.
 
-Modules:
+**Modules:**
 1. python3/3.11.0
 2. papi/7.0.1
 3. openmpi/4.0.1
 4. cuda/12.3.2
 
-Python Packages (in order of installation):
+**Python Packages (in order of installation):**
 1. python-papi
 2. numpy
 3. codetiming
 4. numba
 5. mpi4py
-
 
 ## High-level HPC Architecture
 
@@ -35,8 +34,8 @@ Python Packages (in order of installation):
 2. Which job queue are you planning to use?
 3. How many CPU cores are required for your task?
 4. How many GPUs do you need?
-5. What is the estimated runtime of your program?
-6. Which modules are necessary to execute the program?
+5. What is the estimated running time of your program?
+6. Which software modules are necessary to execute the program?
 7. What script or command will you use to run the program?
 
 ```
@@ -52,8 +51,6 @@ Python Packages (in order of installation):
 
 #PBS -N testScript
 
-
-
 module load python3/3.11.0
 module load papi/7.0.1
 
@@ -68,8 +65,6 @@ cd python/jobScripts
 qsub 0_testScript.pbs
 ```
 
-
-
 ## HPC Compute Node
 
 ![](figs/computeNode.drawio.png)
@@ -83,8 +78,6 @@ qsub 1_cachePapi.pbs
 ```
 
 Are you getting linear performance for a third and fourth call?
-
-
 
 ## Vector Parallelism
 
@@ -101,7 +94,6 @@ qsub 2_vectorize.pbs
 ## Multi-core Parallelism
 
 ![](figs/multicorePrallelism.drawio.png)
-
 
 ## GPU Parallelism 
 
@@ -129,7 +121,6 @@ A block can be executed only in one SM, but an SM can have multiple blocks simul
 
 **Wave** is the number of thread blocks that run concurrently. So if we have 12 SMs and we launch a kernel with 8 blocks, with an occupancy of 1 block per SM, there will be two waves.
 
-
 ### Thread Indexing
 
 Threads, blocks, and grids are organized in three dimensions: x, y, and z. For simplicity, we will use only two dimensions.
@@ -149,7 +140,6 @@ Threads, blocks, and grids are organized in three dimensions: x, y, and z. For s
 ### How do we assign a unique thread id to each thread using the above?
 
 ![](figs/thread_index.drawio.png)
-
 
 1. Find the blockId --> 
 ```
@@ -178,8 +168,8 @@ d = x * y
 ![](figs/gpu-node.png)
 
 The are two types of data movement in GPUs:
-1. Host-to-Device data movement (H2D): Move data from the host memory to the GPU memory.
-2. Device-to-Device data movement (D2D): Move data from the memory of one GPU to another.
+1. **Host-to-Device data movement (H2D):** Move data from the host memory to the GPU memory.
+2. **Device-to-Device data movement (D2D):** Move data from the memory of one GPU to another.
 
 H2D transfer happens through the PCIe switch and D2D transfer happens through NVLink. This makes D2D transfers more faster than H2D transfers.
 

@@ -185,6 +185,8 @@ H2D transfer happens through the PCIe switch and D2D transfer happens through NV
 
 ## Streams
 
+Streamd are a sequence of operations that execute in `issue-order` on the GPU. Streams can be envisioned as separate queues that function independently and concurrently.
+
 ![](figs/streams.png)
 
 

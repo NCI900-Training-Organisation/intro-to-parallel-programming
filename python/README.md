@@ -1,28 +1,29 @@
 # Introduction to Parallel Programming Using Python
 This repository provides an introduction to the concepts of parallel programming using Python.
 
-**Learning outcomes of the tutorial are:**
-1. Learn the basic concepts of parallel programming.
-2. Learn how an HPC machine is organized.
-3. Learn how to submit a Job to a PBS batch scheduler. 
-4. Learn the different hardware components that make up an HPC machine. 
+Learning outcomes of the tutorial are:
+1. Learn the basics concpets of parallel programming.
+2. Learn the different harware components that make up a HPC machine. 
+3. Learn how an HPC machine is organized.
+4. Lear how to submit a Job to an PBS batch scheduler. 
 
-**Prerequisite:**
+Prerequisite:
 1. Experience with Python.
-2. Experience with bash or similar Unix shells.
+2. Experience with bash or similar unix shells.
 
-**Modules:**
+Modules:
 1. python3/3.11.0
 2. papi/7.0.1
 3. openmpi/4.0.1
 4. cuda/12.3.2
 
-**Python Packages (in order of installation):**
+Python Packages (in order of installation):
 1. python-papi
 2. numpy
 3. codetiming
 4. numba
 5. mpi4py
+
 
 ## High-level HPC Architecture
 
@@ -34,8 +35,8 @@ This repository provides an introduction to the concepts of parallel programming
 2. Which job queue are you planning to use?
 3. How many CPU cores are required for your task?
 4. How many GPUs do you need?
-5. What is the estimated running time of your program?
-6. Which software modules are necessary to execute the program?
+5. What is the estimated runtime of your program?
+6. Which modules are necessary to execute the program?
 7. What script or command will you use to run the program?
 
 ```
@@ -51,6 +52,8 @@ This repository provides an introduction to the concepts of parallel programming
 
 #PBS -N testScript
 
+
+
 module load python3/3.11.0
 module load papi/7.0.1
 
@@ -65,11 +68,13 @@ cd python/jobScripts
 qsub 0_testScript.pbs
 ```
 
+
+
 ## HPC Compute Node
 
 ![](figs/computeNode.drawio.png)
 
-## How does *Cache* influence peformance?
+## How does cache influence peformance?
 
 As the data size increases, cache misses also increase, leading to performance degradation.
 
@@ -77,15 +82,17 @@ As the data size increases, cache misses also increase, leading to performance d
 qsub 1_cachePapi.pbs
 ```
 
-Are you getting linear performance for a third and fourth call?
+Are you getting linear peformance for third and fourth call?
+
+
 
 ## Vector Parallelism
 
 ![](figs/vectorPrallelism.drawio.png)
 
-### How does vectorization influence performance?
+### How does vectorization influence peformance?
 
-We will use `Numba` to vectorize Python code.
+We will use `Numba` to vectorrize python code.
 
 ```
 qsub 2_vectorize.pbs
@@ -95,13 +102,14 @@ qsub 2_vectorize.pbs
 
 ![](figs/multicorePrallelism.drawio.png)
 
+
 ## GPU Parallelism 
 
-_Gadi only has NVIDIA GPUs. So when we say GPUs we mean NVIDIA GPUs. Nevertheless, many concepts discussed here are the same across different vendors_.
+_Gadi only has NVIDIA GPUs. So when we say GPUs we mean NVIDIA GPUs. Neveretheless, many concepts discussed here are the same across different vendors_.
 
-While the CPU is optimized to do a single operation as fast as it can (low latency operation), the GPU is optimized to do a large number of slow operations (high throughput operation).
+While CPU is optimized to do a single operation as fast as it can (low latency operation), GPU is optimized to do large number of slow operations (high throughput operation).
 
-GPUs are composed of multiple Streaming Multiprocessors (SMs), an on-chip L2 cache, and high-bandwidth DRAM. The SMs execute operations and the data and code are accessed from DRAM through the L2 cache.
+GPUs  are composed of multiple Streaming Multiprocessors (SMs), an on-chip L2 cache, and high-bandwidth DRAM. The SMs execute operations and the data and code are accessed from DRAM through the L2 cache.
 
 ![](figs/SM.png)
 
@@ -119,7 +127,8 @@ A block can be executed only in one SM, but an SM can have multiple blocks simul
 
 ![](figs/wave.png)
 
-**Wave** is the number of thread blocks that run concurrently. So if we have 12 SMs and we launch a kernel with 8 blocks, with an occupancy of 1 block per SM, there will be two waves.
+**Wave** is the number of thread blocks that run concurrently. So if we have 12 SMs and we launch a kernel with 8 blocks, with an occupency of 1 block per SM, there will be two waves.
+
 
 ### Thread Indexing
 
@@ -140,6 +149,7 @@ Threads, blocks, and grids are organized in three dimensions: x, y, and z. For s
 ### How do we assign a unique thread id to each thread using the above?
 
 ![](figs/thread_index.drawio.png)
+
 
 1. Find the blockId --> 
 ```
@@ -168,10 +178,14 @@ d = x * y
 ![](figs/gpu-node.png)
 
 The are two types of data movement in GPUs:
-1. **Host-to-Device data movement (H2D):** Move data from the host memory to the GPU memory.
-2. **Device-to-Device data movement (D2D):** Move data from the memory of one GPU to another.
+1. Host-to-Device data movement (H2D): Move data from the host memory to the GPU memory.
+2. Device-to-Device data movement (D2D): Move data from the memory of one GPU to another.
 
 H2D transfer happens through the PCIe switch and D2D transfer happens through NVLink. This makes D2D transfers more faster than H2D transfers.
+
+## Streams
+
+![](figs/streams.png)
 
 
 ## Multi-node Parallelism
@@ -184,13 +198,17 @@ We overcome this challenge by using message passing.
 
 ![MPI](figs/MPI.png)
 
-# Referneces
+# Reference
 1. https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html
 2. https://www.nvidia.com/content/PDF/fermi_white_papers/NVIDIA_Fermi_Compute_Architecture_Whitepaper.pdf
 3. https://www.sciencedirect.com/science/article/abs/pii/B978012800979600010X
+4. https://developer.download.nvidia.com/CUDA/training/StreamsAndConcurrencyWebinar.pdf
 
 
 # Contributers
-1. [Joseph John, Staff Scientist, NCI](https://www.josephjohn.org) 
+1. [Joseph John, Staff Scientist, NCI](https://www.josephjohn.org) \
 
 *ChatGPT has been utilized to enhance the texts in this document*.
+
+
+

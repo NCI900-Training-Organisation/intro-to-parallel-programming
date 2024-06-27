@@ -1,0 +1,16 @@
+Process 0 before receiving has the number 0.0
+Process 1 drew the number 0.964317345785458
+Process 0 received the number 0.964317345785458
+
+======================================================================================
+                  Resource Usage on 2024-06-27 09:47:23:
+   Job Id:             119220163.gadi-pbs
+   Project:            vp91
+   Exit Status:        0
+   Service Units:      0.08
+   NCPUs Requested:    48                     NCPUs Used: 48              
+                                           CPU Time Used: 00:00:02        
+   Memory Requested:   10.0GB                Memory Used: 679.06MB        
+   Walltime requested: 00:02:00            Walltime Used: 00:00:03        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================

@@ -185,8 +185,6 @@ H2D transfer happens through the PCIe switch and D2D transfer happens through NV
 
 ## Streams
 
-Streamd are a sequence of operations that execute in `issue-order` on the GPU. Streams can be envisioned as separate queues that function independently and concurrently.
-
 ![](figs/streams.png)
 
 
@@ -200,11 +198,20 @@ We overcome this challenge by using message passing.
 
 ![MPI](figs/MPI.png)
 
+### Broadcast Operation
+
+![](figs/bcast.png)
+
+### GPU-aware MPI and All-Gather Operation
+
+![](figs/allgather.png)
+
 # Reference
 1. https://docs.nvidia.com/deeplearning/performance/dl-performance-gpu-background/index.html
 2. https://www.nvidia.com/content/PDF/fermi_white_papers/NVIDIA_Fermi_Compute_Architecture_Whitepaper.pdf
 3. https://www.sciencedirect.com/science/article/abs/pii/B978012800979600010X
 4. https://developer.download.nvidia.com/CUDA/training/StreamsAndConcurrencyWebinar.pdf
+5. https://mpitutorial.com
 
 
 # Contributers

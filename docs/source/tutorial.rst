@@ -1,6 +1,23 @@
 Tutorial
 ========
 
+In this tutorial, we'll be using the Gadi HPC machine at NCI. A Python virtual environment will be provided for you during the session.
+
+.. important::
+    For a smooth setup on the supercomputer system, please register for an NCI account if you don't have one:
+        1.  Go to https://my.nci.org.au/mancini
+        2.  Click on the "Sign up" button to start your registration form.
+        3.  Complete all steps in the registration form. (Note: you must provide a current email address from your institution or place of work, not a personal email.)
+        4.  Select the option to join project vp91 at Step 3 of the form.
+        5.  Click "Finish" on the final page of the form to complete your registration request.
+        or 
+    apply to join project vp91:
+        1.  Login to your NCI account https://my.nci.org.au/mancini
+        2.  Select Project and Groups on the left-side menu
+        3.  Select Find project or group on the top tab and search vp91 to apply for membership
+    Note: Project vp91 is temporary for training purposes only. Data in vp91 will be cleaned in one week time after the training.
+
+
 High-level HPC Architecture
 ---------------------------
 .. image::  figs/HPC_overview.drawio.png
@@ -27,14 +44,10 @@ Requesting a Job
 
     #PBS -P vp91
     #PBS -q normal
-
     #PBS -l ncpus=48
     #PBS -l mem=10GB
     #PBS -l walltime=00:02:00
-
     #PBS -N testScript
-
-
 
     module load python3/3.11.0
     module load papi/7.0.1

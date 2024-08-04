@@ -62,6 +62,13 @@ Requesting a Job
 
     which python
 
+* P - Gadi project (sometimes called account as well) used
+* q - Gadi queue to use
+* ncpus - Total number of cores we are provisioning
+* ngpus - Total number of GPUs we are provisioning
+* mem - Total memory we are provisioning
+* l - Total wall time for which the resources are provisioned
+* N - Name of the job 
 
 .. code-block:: console
     :linenos:

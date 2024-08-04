@@ -7,7 +7,7 @@ High-level HPC Architecture
 
 
 Requesting a Job
-----------------
+****************
 
 1.  Which project are you using?
 2.  Which job queue are you planning to use?
@@ -52,12 +52,12 @@ Requesting a Job
 
 
 HPC Compute Node
-----------------
+****************
 
 .. image::  figs/computeNode.drawio.png
 
 How does cache influence peformance?
-------------------------------------
+************************************
 
 As the data size increases, cache misses also increase, leading to performance degradation.
 
@@ -101,7 +101,7 @@ Each SM is organized into CUDA cores capable of doing specialized operations.
 .. image::  figs/cuda_cores.png
 
 GPU Execution Model
--------------------
+*******************
 
 Each GPU kernels are launched with a set of threads. The threads can be organized into blocks, and the blocks can be organized into a grid. The maximum number of threads a block can have will depend on the GPU generation. 
 
@@ -115,7 +115,7 @@ A block can be executed only in one SM, but an SM can have multiple blocks simul
 
 
 Thread Indexing
----------------
+***************
 
 Threads, blocks, and grids are organized in three dimensions: x, y, and z. For simplicity, we will use only two dimensions.
 
@@ -148,7 +148,7 @@ How do we assign a unique thread id to each thread using the above?
     threadId = [(blockDim.x * blockDim.y) * blockId] + [(blockDim.y * threadIdx.x) + threadIdx.y]
 
 Warps and Warp Schedulers
--------------------------
+*************************
 
 While we can arrange the threads in any order, the SM schedules the threads as **Warps**, and each warp contains 32 threads. For example, if you launch a block with 256 threads, those 256 threads are arranged as 8 warps (256/8). All the threads in the same warp can only execute the same instruction at a given time. For example, if we have a program
 
@@ -161,7 +161,7 @@ While we can arrange the threads in any order, the SM schedules the threads as *
 .. image::  figs/warp.png
 
 Data Movement in GPUs
----------------------
+*********************
 
 .. image::  figs/gpu-node.png
 
@@ -173,7 +173,7 @@ The are two types of data movement in GPUs:
 H2D transfer happens through the PCIe switch and D2D transfer happens through NVLink. This makes D2D transfers more faster than H2D transfers.
 
 Streams
--------
+*******
 
 .. image::  figs/streams.png
 
@@ -190,7 +190,7 @@ We overcome this challenge by using message passing.
 .. image::  figs/MPI.png
 
 Broadcast Operation
--------------------
+*******************
 
 .. image::  figs/bcast.png
 

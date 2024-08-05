@@ -125,7 +125,7 @@ In the context of caching, **cache hit** and **cache miss** refer to the outcome
 
 - **Cache Miss**: A cache miss happens when the requested data or instruction is not found in the cache. In this case, the system must retrieve the data from the main memory or another slower storage medium. After fetching the data, it is typically stored in the cache for future use. Cache misses can result in slower access times since the data must be retrieved from a less efficient source.
 
-Overall, maximizing cache hits and minimizing cache misses are key strategies for optimizing system performance and efficiency. Also, ss the data size increases, 
+Overall, maximizing cache hits and minimizing cache misses are key strategies for optimizing system performance and efficiency. Also, as the data size increases, 
 cache misses also increase, leading to performance degradation.
 
 .. code-block:: console
@@ -138,9 +138,18 @@ Are you getting linear peformance for third and fourth call?
 Vector Parallelism
 ------------------
 
+Vector parallelism is a form of parallel computing that leverages the simultaneous processing of multiple data elements using vector processors or 
+SIMD (Single Instruction, Multiple Data) instructions. 
+
 .. image::  figs/vectorPrallelism.drawio.png
 
-### How does vectorization influence peformance?
+
+How does vectorization influence peformance?
+*******************************************
+
+Vector processors are specialized hardware designed to handle vector operations. Instead of processing single data elements sequentially, they can operate 
+on entire vectors (arrays of data) in parallel. The effectiveness of vector parallelism depends on the vector length, which is the number of data elements 
+a vector processor can handle in parallel.
 
 We will use `Numba` to vectorrize python code.
 

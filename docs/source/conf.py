@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Introduction to Parallel Programming Using Python'
-copyright = '2024, NCI'
+copyright = '2024, National Computational Infrastructure'
 author = 'Joseph John'
 
 release = '0.1'

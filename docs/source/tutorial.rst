@@ -62,20 +62,38 @@ Requesting a Job
 
     which python
 
-* P - Gadi project (sometimes called account as well) used
-* q - Gadi queue to use
-* ncpus - Total number of cores we are provisioning
-* ngpus - Total number of GPUs we are provisioning
-* mem - Total memory we are provisioning
-* l - Total wall time for which the resources are provisioned
-* N - Name of the job 
+* **P**     - Gadi project (sometimes called account) used
+* **q**     - Gadi queue to use
+* **ncpus** - Total number of cores requested
+* **ngpus** - Total number of GPUs requested
+* **mem**   - Total memory requested
+* **l**     - Total wall time for which the resources are provisioned
+* **N**     - Name of the job 
+
+For more PBS Directives please checkout the `Gadi document <https://opus.nci.org.au/display/Help/PBS+Directives+Explained>`_  and for more details on the 
+different Gadi queues plase checkout the corresponding `Gadi document <https://opus.nci.org.au/display/Help/Queue+Structure>`_ 
+
+All the python code are available in the directory python/src while all the job scripts are available in the directory. To submit a job use 
+the command
 
 .. code-block:: console
     :linenos:
 
-    cd python/jobScripts
     qsub 0_testScript.pbs
 
+and to know the status of your job use the command
+
+.. code-block:: console
+    :linenos:
+
+    qstat <jobid>
+
+To know get the details of the nodes allocated use the command
+
+.. code-block:: console
+    :linenos:
+
+    qstat -swx <jobid>
 
 HPC Compute Node
 ****************

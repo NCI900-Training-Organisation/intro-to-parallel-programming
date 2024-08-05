@@ -12,8 +12,8 @@ In this tutorial, we'll be using the Gadi HPC machine at NCI. A Python virtual e
     tutorial/hpc_node
     tutorial/vector
     tutorial/multicore
-    tutorial/multinode
     tutorial/gpu
+    tutorial/multinode
 
 
 

@@ -12,7 +12,7 @@ We overcome this challenge by using message passing.
 Broadcast Operation
 *******************
 
-.. image::  figs/bcast.png
+.. image::  ../figs/bcast.png
 
 GPU-aware MPI and All-Gather Operation
 **************************************

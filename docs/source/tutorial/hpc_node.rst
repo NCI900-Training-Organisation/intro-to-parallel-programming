@@ -1,7 +1,7 @@
 HPC Compute Node
 ****************
 
-.. image::  figs/computeNode.drawio.png
+.. image::  ../figs/computeNode.drawio.png
 
 A cache is a small, high-speed storage component used to temporarily hold frequently accessed data or instructions
 (`temporal locality <https://www.sciencedirect.com/topics/computer-science/temporal-locality>`_ ) to improve system performance. Its primary purpose is to 

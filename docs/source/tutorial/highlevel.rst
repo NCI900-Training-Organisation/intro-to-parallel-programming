@@ -5,7 +5,7 @@ In an HPC machine, nodes are provisioned by allocating compute resources from a 
 job schedulers like Slurm or PBS to manage and distribute these resources efficiently. When a job is submitted, the scheduler assigns nodes with 
 the necessary compute power, memory, and storage to execute the job. Nodes can be dynamically allocated or deallocated based on job demands and system load.
 
-.. image::  figs/HPC_overview.drawio.png
+.. image::  ../figs/HPC_overview.drawio.png
 
 
 **Login nodes** in an HPC cluster serve as access points for users to interact with the system, allowing tasks such as code compilation, data preparation, 

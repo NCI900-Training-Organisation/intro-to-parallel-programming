@@ -3,7 +3,7 @@ Multi-core Parallelism
 
 Multi-core parallelism is a technique used to enhance computing performance by utilizing multiple processor cores within a NUMA node or across NUMA nodes. 
 
-.. image::  figs/multicorePrallelism.drawio.png
+.. image::  ../figs/multicorePrallelism.drawio.png
 
 
 

@@ -4,7 +4,7 @@ Vector Parallelism
 Vector parallelism is a form of parallel computing that leverages the simultaneous processing of multiple data elements using vector processors or 
 SIMD (Single Instruction, Multiple Data) instructions. 
 
-.. image::  figs/vectorPrallelism.drawio.png
+.. image::  ../figs/vectorPrallelism.drawio.png
 
 
 How does vectorization influence peformance?

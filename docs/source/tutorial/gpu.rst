@@ -45,8 +45,8 @@ Threads, blocks, and grids are organized in three dimensions: x, y, and z. For s
 3.  *threadIdx.x* — thread index in x dimension 
 4.  *threadIdx.y* — thread index in y dimension 
 
-How do we assign a unique thread id to each thread using the above?
--------------------------------------------------------------------
+How do we assign a unique thread id to each thread?
+***************************************************
 
 .. image::  ../figs/thread_index.drawio.png
 

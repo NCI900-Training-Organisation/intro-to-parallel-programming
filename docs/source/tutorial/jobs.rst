@@ -13,8 +13,6 @@ Requesting a Job
 .. code-block:: console
     :linenos:
 
-    pygments_style = 'sphinx'
-
     #!/bin/bash
 
     #PBS -P vp91

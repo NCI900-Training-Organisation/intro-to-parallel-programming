@@ -17,6 +17,8 @@ Contents
    modules
    packages
    tutorial
+   references
+
 
 
 

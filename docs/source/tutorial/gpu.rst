@@ -2,28 +2,28 @@
 
 GPU Parallelism 
 ---------------
-Gadi only has NVIDIA GPUs. So when we say GPUs we mean NVIDIA GPUs. Neveretheless, many concepts discussed here are the same across different vendors_.
-While CPU is optimized to do a single operation as fast as it can (low latency operation), GPU is optimized to do large number of slow operations (high throughput operation).
-GPUs  are composed of multiple Streaming Multiprocessors (SMs), an on-chip L2 cache, and high-bandwidth DRAM. The SMs execute operations and the data and code are accessed from DRAM through the L2 cache.
+Gadi only has NVIDIA GPUs. So when we say GPUs we mean NVIDIA GPUs. Nevertheless, many concepts discussed here are the same across different vendors_.
+While the CPU is optimized to do a single operation as fast as it can (low latency operation), the GPU is optimized to do a large number of slow operations (high throughput operation).
+GPUs are composed of multiple Streaming Multiprocessors (SMs), an on-chip L2 cache, and high-bandwidth DRAM. The SMs execute operations and the data and code are accessed from DRAM through the L2 cache.
 
-.. image::  ../figs/SM.png
+.. image:: ../figs/SM.png
 
 Each SM is organized into CUDA cores capable of doing specialized operations.
 
-.. image::  ../figs/cuda_cores.png
+.. image:: ../figs/cuda_cores.png
 
 GPU Execution Model
 *******************
 
 Each GPU kernels are launched with a set of threads. The threads can be organized into blocks, and the blocks can be organized into a grid. The maximum number of threads a block can have will depend on the GPU generation. 
 
-.. image::  ../figs/blocks.png
+.. image:: ../figs/blocks.png
 
 A block can be executed only in one SM, but an SM can have multiple blocks simultaneously. The maximum number of blocks an SM can host will depend on the GPU generation. Since an SM can execute multiple thread blocks concurrently, it is always a good idea to launch a kernel with blocks several times higher than the number of SMs. 
 
 .. image:: ../figs/wave.png
 
-**Wave** is the number of thread blocks that run concurrently. So if we have 12 SMs and we launch a kernel with 8 blocks, with an occupency of 1 block per SM, there will be two waves.
+**Wave** is the number of thread blocks that run concurrently. So if we have 12 SMs and we launch a kernel with 8 blocks, with an occupancy of 1 block per SM, there will be two waves.
 
 
 Thread Indexing
@@ -48,7 +48,7 @@ Threads, blocks, and grids are organized in three dimensions: x, y, and z. For s
 How do we assign a unique thread id to each thread?
 ***************************************************
 
-.. image::  ../figs/thread_index.drawio.png
+.. image:: ../figs/thread_index.drawio.png
 
 
 1. Find the blockId --> 
@@ -70,12 +70,12 @@ While we can arrange the threads in any order, the SM schedules the threads as *
 
 *All* the threads in the warp should finish executing the addition operation, only then can the threads execute the multiplication operation. Depending on the generation of the GPU, it may contain more than one warp scheduler. For instance, in the *Fermi GPU*, each SM features two warp schedulers and two instruction dispatch units. This allows two warps to be issued and executed concurrently. It is always a good idea to consider the warp size (32) and the maximum number of concurrent warps possible when deciding the block size.
 
-.. image::  ../figs/warp.png
+.. image:: ../figs/warp.png
 
 Data Movement in GPUs
 *********************
 
-.. image::  ../figs/gpu-node.png
+.. image:: ../figs/gpu-node.png
 
 The are two types of data movement in GPUs:
 
@@ -87,4 +87,23 @@ H2D transfer happens through the PCIe switch and D2D transfer happens through NV
 Streams
 *******
 
-.. image::  ../figs/streams.png
+Streams are used to manage and optimize parallel computing tasks. It is a sequence of operations (or tasks) 
+that are executed on the GPU. Streams allow for the parallel execution of these tasks, enabling more efficient 
+use of the GPU's resources. Each stream can execute kernels and manage data transfers between the CPU and GPU.
+
+.. image:: ../figs/streams.png
+
+The main advantages of using streams are:
+
+1. **Concurrency**: Streams allow for concurrent execution of multiple tasks. This means you can have multiple 
+streams, each handling different tasks, and the GPU can process these tasks in parallel. For example, one stream 
+might be handling a computation kernel, while another is performing data transfer.
+
+2. **Asynchronous Execution**: Operations within a stream are executed in the order they are issued. 
+However, different streams can operate asynchronously with respect to each other. This means that tasks 
+in one stream can proceed independently of tasks in another stream, leading to potential performance improvements.
+
+3. **Data Transfers**: Streams can be used to overlap data transfers between the CPU and GPU with kernel 
+executions. For example, while one stream is using data, another stream can be used to transfer new data 
+to the GPU, which helps in hiding the latency of data transfers.
+

@@ -19,6 +19,14 @@ extensions = [
     'sphinx.ext.intersphinx',
 ]
 
+sphinx_immaterial_custom_admonitions = [
+    {
+        "name": "legal",
+        "color": (236, 64, 11),
+        "icon": "fontawesome/solid/recycle",
+    },
+]
+
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),

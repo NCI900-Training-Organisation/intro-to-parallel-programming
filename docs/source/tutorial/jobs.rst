@@ -1,7 +1,9 @@
 Requesting a Job
 ****************
 
-.. note::
+.. admonition:: Overview
+   :class: Overview
+
     * **Tutorial:** 15 min
     * **Exercises:** 5 min
 
@@ -69,3 +71,10 @@ To know get the details of the nodes allocated use the command
     :linenos:
 
     qstat -swx <jobid>
+
+.. admonition:: Key Points
+   :class: Key-Points
+
+    #. Multiple PBS directives are available request a job.
+    #. Gadi uses some custom directives.
+    #. There are two modes to request a job - batched and interactive.

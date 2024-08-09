@@ -1,7 +1,7 @@
 Prerequisite
 ============
 
-.. note::
+.. important::
  1.  Experience with Python.
  2.  Experience with bash or similar Unix shells.
 
@@ -25,5 +25,5 @@ If you are using a Windows machine please make sure you have a shell that suppor
  3.  Select Find project or group on the top tab and search vp91 to apply for membership
 
 
-.. note::
+.. warning::
     Project vp91 is temporary for training purposes only. Data in vp91 will be cleaned in one week time after the training.

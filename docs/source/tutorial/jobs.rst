@@ -79,5 +79,5 @@ To know get the details of the nodes allocated use the command
     #. Gadi uses some custom directives.
     #. There are two modes to request a job - batched and interactive.
 
-.. legal::
+.. pied-piper::
     test

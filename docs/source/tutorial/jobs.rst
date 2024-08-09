@@ -1,6 +1,14 @@
 Requesting a Job
 ****************
 
+.. note::
+    * **Tutorial:** 15 min
+    * **Exercises:** 5 min
+
+        **Objectives:**
+            #. Learn how to write a PBS job script in Gadi.
+            #. Learn how to launch a job in Gadi.
+
 1.  Which project are you using?
 2.  Which job queue are you planning to use?
 3.  How many CPU cores are required for your task?

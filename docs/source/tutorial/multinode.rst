@@ -9,8 +9,8 @@ Multi-node Parallelism
 
         **Objectives:**
             #. Learn about distributed computing using message passing.
-            #. Learn about the **Broadcast** operation in MPI.
-            #. Learn about the **Gather** operation in MPI.
+            #. Learn about the *Broadcast* operation in MPI.
+            #. Learn about the *Gather* operation in MPI.
 
 While all the aforementioned parallelisms are beneficial, it is limited to a single node. To truly scale up an 
 application, we need to use multiple nodes, i.e., distributed computing. The main challenge with distributed 

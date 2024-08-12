@@ -1,6 +1,16 @@
 High-level HPC Architecture
 ---------------------------
 
+.. admonition:: Overview
+   :class: Overview
+
+    * **Tutorial:** 20 min
+    * **Exercises:** 5 min
+
+        **Objectives:**
+            #. Learn how HPC machines are generally organized.
+            #. Learn how *Cache* influence performance.
+
 In an HPC machine, nodes are provisioned by allocating compute resources from a central pool based on the job's 
 requirements. The system uses job schedulers like Slurm or PBS to manage and distribute these resources 
 efficiently. When a job is submitted, the scheduler assigns nodes with the necessary computing power, memory, 
@@ -34,12 +44,10 @@ HPC Compute Node
 
 .. image:: ../figs/computeNode.drawio.png
 
-A cache is a small, high-speed storage component used to temporarily hold frequently accessed data or instructions
-(`temporal locality <https://www.sciencedirect.com/topics/computer-science/temporal-locality>`_ ) to improve 
-system performance. Its primary purpose is to reduce the time it takes for a processor to access data from 
-the main memory (RAM) or other slower storage devices.
-
-
+A cache is a small, high-speed storage component used to temporarily hold frequently accessed data or 
+instructions (`temporal locality <https://www.sciencedirect.com/topics/computer-science/temporal-locality>`_ ) 
+to improve system performance. Its primary purpose is to reduce the time it takes for a processor to access 
+data from the main memory (RAM) or other slower storage devices.
 
 L1, L2, and L3 caches are hierarchical levels of CPU cache designed to speed up data access and improve 
 overall processing performance:
@@ -50,7 +58,8 @@ it provides the quickest access to frequently used data and instructions, but it
 
 - **L2 Cache**: Larger than L1 but slower, the L2 cache is also located on the CPU chip or very close to it. 
 It serves as an intermediary between the fast L1 cache and the slower L3 cache or main memory. It holds data 
-and instructions that are not immediately needed by L1 but are accessed frequently enough to justify faster access than the main memory.
+and instructions that are not immediately needed by L1 but are accessed frequently enough to justify faster 
+access than the main memory.
 
 - **L3 Cache**: This is the largest and slowest of the three caches, typically shared among multiple CPU cores. 
 It acts as a last-level cache before data is fetched from the main memory. The L3 cache improves performance 
@@ -83,3 +92,9 @@ and efficiency. Also, as the data size increases, cache misses also increase, le
     qsub 1_cachePapi.pbs
 
 Are you getting linear performance for third and fourth calls?
+
+.. admonition:: Key Points
+   :class: hint
+
+    #. There are different levels to an HPC machine.
+    #. Cache misses can influence peformance.

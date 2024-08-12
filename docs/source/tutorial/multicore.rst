@@ -1,6 +1,16 @@
 Multi-core Parallelism
 ----------------------
 
+.. admonition:: Overview
+   :class: Overview
+
+    * **Tutorial:** 20 min
+    * **Exercises:** 5 min
+
+        **Objectives:**
+            #. Learn about multi-core parallelism.
+            #. Learn about NUMA regions. 
+
 Multi-core parallelism is a technique used to enhance computing performance by utilizing multiple processor 
 cores within a NUMA node or across NUMA nodes. 
 
@@ -41,3 +51,9 @@ the memory is divided into multiple regions, each associated with one or more pr
 fast access to its local memory region but slower access to memory nodes associated with other processors. 
 This creates a "non-uniform" access pattern compared to Uniform Memory Access (UMA) systems, where all memory 
 access times are the same regardless of the processor's location.
+
+.. admonition:: Key Points
+   :class: hint
+
+    #. Multi-core parallelism can improve the peformance of the application.
+    #. The effectiveness of the parallelism depends on the problem size.

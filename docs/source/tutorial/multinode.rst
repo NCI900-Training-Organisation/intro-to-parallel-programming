@@ -1,6 +1,17 @@
 Multi-node Parallelism
 -----------------------
 
+.. admonition:: Overview
+   :class: Overview
+
+    * **Tutorial:** 20 min
+    * **Exercises:** 5 min
+
+        **Objectives:**
+            #. Learn about distributed computing using message passing.
+            #. Learn about the **Broadcast** operation in MPI.
+            #. Learn about the **Gather** operation in MPI.
+
 While all the aforementioned parallelisms are beneficial, it is limited to a single node. To truly scale up an 
 application, we need to use multiple nodes, i.e., distributed computing. The main challenge with distributed 
 computing is that the memory in each node is distinct and separate, meaning there is no way for a thread in 
@@ -44,3 +55,9 @@ This results in each process having a complete view of the data from all process
 
 The MPI Allgather operation is useful for scenarios where every process needs to access or aggregate information 
 from all other processes, such as in parallel data processing and aggregation tasks.
+
+.. admonition:: Key Points
+   :class: hint
+
+    #. MPI is an effective tool for distributed computating
+    #. Message passing incurs communication cost.

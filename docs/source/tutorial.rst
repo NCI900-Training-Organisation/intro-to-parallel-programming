@@ -8,7 +8,6 @@ will be provided for you during the session.
 
     tutorial/jobs
     tutorial/highlevel
-    tutorial/hpc_node
     tutorial/vector
     tutorial/multicore
     tutorial/gpu

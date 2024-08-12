@@ -12,27 +12,6 @@ High-level HPC Architecture
             #. Learn how *Cache* influence performance.
 
 
-.. list-table:: Comparison
-   :widths: 20 10 10 15 20 
-   :header-rows: 1   
- 
-   * - Platform
-     - Self-Contained?
-     - Cost
-     - Flexibility
-     - Description
-   * - Raspberry Pi
-     - No
-     - $30 
-     - Limitless
-     - Mini computer board with GPIO pins for interfacing and experimentation.
-   * - Lego Mindstorms
-     - Yes
-     - $350
-     - Medium
-     - Lego robotics sytem with motors and sensors.  Build a robot, then write logic to move it around and do stuff.
-
-
 In an HPC machine, nodes are provisioned by allocating compute resources from a central pool based on the job's 
 requirements. The system uses job schedulers like Slurm or PBS to manage and distribute these resources 
 efficiently. When a job is submitted, the scheduler assigns nodes with the necessary computing power, memory, 

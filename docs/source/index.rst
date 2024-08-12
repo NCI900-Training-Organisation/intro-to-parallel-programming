@@ -41,6 +41,27 @@ This repository provides an introduction to the concepts of parallel programming
 Contents
 --------
 
+.. list-table:: Comparison
+   :widths: 20 10 10 15 20 
+   :header-rows: 1   
+ 
+   * - Platform
+     - Self-Contained?
+     - Cost
+     - Flexibility
+     - Description
+   * - Raspberry Pi
+     - No
+     - $30 
+     - Limitless
+     - Mini computer board with GPIO pins for interfacing and experimentation.
+   * - Lego Mindstorms
+     - Yes
+     - $350
+     - Medium
+     - Lego robotics sytem with motors and sensors.  Build a robot, then write logic to move it around and do stuff.
+
+
 .. toctree::
 
    prerequisite

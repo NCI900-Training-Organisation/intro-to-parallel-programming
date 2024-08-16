@@ -5,7 +5,7 @@ Basic of Parallelism
    :class: Overview
 
     * **Tutorial:** 15 min
-    * **Exercises:** 10 min
+    * **Exercises:** 15 min
 
         **Objectives:**
             #. Learn about the difference between threads and process
@@ -51,6 +51,34 @@ Challenges with Threads
 #. Synchronization: As threads share resources, they need mechanisms to synchronize access to prevent conflicts and ensure data consistency. Common synchronization tools include mutexes, semaphores, and locks.
 #. Deadlock: A situation where two or more threads are waiting indefinitely for resources held by each other, leading to a standstill.
 #. Race Conditions: Occur when the outcome depends on the unpredictable timing of thread execution, potentially causing inconsistent results.
+
+
+Synchronization in programming is the coordination of concurrent threads or processes to ensure they operate 
+correctly when accessing shared resources. It prevents issues such as race conditions and data corruption by 
+managing access to shared resources, ensuring that only one thread or process can modify the resource at a time. 
+Synchronization mechanisms, like locks, semaphores, and mutexes, help maintain consistency and order in a 
+multithreaded or multiprocess environment.
+
+Analogy of room and locks:
+
+**The Room**: Think of a room that represents a shared resource or a critical section of code in a program. 
+This room can only be used by one person at a time to ensure that things don't get messed up.
+
+**The Lock**: The lock is like a physical key that controls access to the room. Only one person can hold the 
+key at any given time.
+
+**Entering the Room**: When a person (a thread) wants to use the room (access the shared resource), 
+they need to get the key (acquire the lock). If no one else is using the room, the person can take the key, 
+enter the room, and use it as needed.
+
+**Occupied Room**: If someone is already inside the room and using it, other people who want to use the room 
+must wait outside. They cannot enter until the current occupant leaves and returns the key.
+
+**Exiting the Room**: Once the person is done using the room, they leave and return the key (release the lock). 
+This allows another person to take the key and use the room.
+
+**Preventing Conflicts**: The lock ensures that only one person is in the room at any time. This prevents 
+conflicts or issues that might arise if multiple people were trying to use the room simultaneously.
 
 .. admonition:: Key Points
    :class: hint

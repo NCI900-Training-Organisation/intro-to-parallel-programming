@@ -11,7 +11,7 @@ will be provided for you during the session.
    * - Topics
      - Duration
    * - Basic of Parallelism
-     - 25 minutes
+     - 30 minutes
    * - Requesting a Job
      - 20 minutes
    * - High-level HPC Architecture

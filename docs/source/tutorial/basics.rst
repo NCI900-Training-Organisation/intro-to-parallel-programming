@@ -9,6 +9,9 @@ Basics of Parallelism
 
         **Objectives:**
             #. Learn about the difference between threads and process
+            #. Learn how to synchronize between threads.
+            #. Learn how to synchronize between processes.
+
 
 Process
 ********
@@ -87,6 +90,7 @@ conflicts or issues that might arise if multiple people were trying to use the r
     #. Processes are isolated with separate memory spaces, while threads share the same memory space within a process.
     #. Processes have higher creation and management overhead due to separate resources and memory, whereas threads are lighter and cheaper to manage.
     #. Threads can communicate easily and efficiently since they share memory, while processes require more complex and resource-intensive Inter-Process Communication (IPC) mechanisms.
+    #. Locks can be used for synchronization.
 
 
 

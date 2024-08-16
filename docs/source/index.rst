@@ -16,6 +16,8 @@ Contents
  
    * - Topics
      - Duration
+   * - Basic of Parallelism
+     - 25 minutes
    * - Requesting a Job
      - 20 minutes
    * - High-level HPC Architecture

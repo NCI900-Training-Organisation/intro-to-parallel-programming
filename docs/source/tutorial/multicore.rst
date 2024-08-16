@@ -45,7 +45,10 @@ parallelism can scale up their performance proportionally.
 threads, managing shared resources, and avoiding issues like race conditions and deadlocks. Effective multi-core 
 programming requires careful design to handle these complexities.
 
-NUMA (Non-Uniform Memory Access) is a computer architecture design used in multi-core and multi-processor systems
+Non-Uniform Memory Access (NUMA)
+********************************
+
+NUMA is a computer architecture design used in multi-core and multi-processor systems
 where the memory access time depends on the location of the memory relative to the processor. In NUMA systems, 
 the memory is divided into multiple regions, each associated with one or more processors. Each processor has 
 fast access to its local memory region but slower access to memory nodes associated with other processors. 

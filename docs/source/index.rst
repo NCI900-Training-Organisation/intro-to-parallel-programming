@@ -16,32 +16,6 @@ Contents
    outcomes
    modules
    packages
-
-.. list-table::   
-   :widths: 20 20 
-   :header-rows: 1   
- 
-   * - Topics
-     - Duration
-   * - Basic of Parallelism
-     - 25 minutes
-   * - Requesting a Job
-     - 20 minutes
-   * - High-level HPC Architecture
-     - 25 minutes
-   * - Vector Parallelism
-     - 25 minutes
-   * - Multi-core Parallelism
-     - 25 minutes
-   * - GPU Parallelism
-     - 40 minutes
-   * - Multi-node Parallelism
-     - 25 minutes
-
-
-
-.. toctree::
-
    tutorial
    references
 

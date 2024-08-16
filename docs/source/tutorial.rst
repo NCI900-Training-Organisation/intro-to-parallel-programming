@@ -6,6 +6,7 @@ will be provided for you during the session.
 
 .. toctree::
 
+    tutorial/basics
     tutorial/jobs
     tutorial/highlevel
     tutorial/vector

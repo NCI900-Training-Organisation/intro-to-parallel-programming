@@ -1,4 +1,4 @@
-Basic of Parallelism
+Basics of Parallelism
 --------------------
 
 .. admonition:: Overview
@@ -59,13 +59,14 @@ managing access to shared resources, ensuring that only one thread or process ca
 Synchronization mechanisms, like locks, semaphores, and mutexes, help maintain consistency and order in a 
 multithreaded or multiprocess environment.
 
-Analogy of room and locks:
+The Room and the Key: An analogy
+*********************************
 
 **The Room**: Think of a room that represents a shared resource or a critical section of code in a program. 
 This room can only be used by one person at a time to ensure that things don't get messed up.
 
-**The Lock**: The lock is like a physical key that controls access to the room. Only one person can hold the 
-key at any given time.
+**The Lock**: The lock is like a physical lock that controls access to the room. Only one person can hold the 
+key of the lock at any given time.
 
 **Entering the Room**: When a person (a thread) wants to use the room (access the shared resource), 
 they need to get the key (acquire the lock). If no one else is using the room, the person can take the key, 

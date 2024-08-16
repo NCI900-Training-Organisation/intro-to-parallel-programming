@@ -10,7 +10,14 @@ This repository provides an introduction to the concepts of parallel programming
 Contents
 --------
 
-.. list-table:: Tutorial Contents
+.. toctree::
+
+   prerequisite
+   outcomes
+   modules
+   packages
+
+.. list-table::   
    :widths: 20 20 
    :header-rows: 1   
  
@@ -35,10 +42,6 @@ Contents
 
 .. toctree::
 
-   prerequisite
-   outcomes
-   modules
-   packages
    tutorial
    references
 

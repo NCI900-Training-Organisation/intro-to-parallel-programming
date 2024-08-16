@@ -28,7 +28,7 @@ Contents
      - 25 minutes
    * - GPU Parallelism
      - 40 minutes
-   * - GPU Parallelism
+   * - Multi-node Parallelism
      - 25 minutes
 
 

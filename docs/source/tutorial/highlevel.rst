@@ -107,7 +107,7 @@ and efficiency. Also, as the data size increases, cache misses also increase, le
 .. code-block:: console
     :linenos:
     
-    qsub 1_cachePapi.pbs
+    qsub 1_cache_papi.pbs
 
 Are you getting linear performance for third and fourth calls?
 

@@ -47,28 +47,6 @@ Requesting a Job
 #. **l** - Total wall time for which the resources are provisioned
 #. **N** - Name of the job 
 
-Here's an example job script for submitting a job to the `normal` queue, requesting only CPUs and no GPUs:
-
-.. code-block:: console
-    :linenos:
-
-    #!/bin/bash
-
-    #PBS -P vp91
-    #PBS -q normal
-    #PBS -l ncpus=48
-    #PBS -l mem=10GB
-    #PBS -l walltime=00:02:00 
-    #PBS -N testScript
-
-    module load python3/3.11.0
-    module load papi/7.0.1
-
-    . /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
-
-    which python
-    papi_avail
-
 
 For more PBS Directives please check the `Gadi document <https://opus.nci.org.au/display/Help/PBS+Directives+Explained>`_ and for more details on the 
 different Gadi queues please check out the corresponding `Gadi document <https://opus.nci.org.au/display/Help/Queue+Structure>`_ .
@@ -80,7 +58,7 @@ the command
 .. code-block:: console
     :linenos:
 
-    qsub 0_testScript.pbs
+    qsub 0_test_script.pbs
 
 and to know the status of your job use the command
 

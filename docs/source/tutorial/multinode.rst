@@ -65,7 +65,7 @@ Exercise
     :linenos:
     
     qsub 6_mpi.pbs
-    qsub 7_mpi_nonBlocking.pbs
+    qsub 7_mpi_non_blocking.pbs
 
 2. How will you perform the broadcast from *Process 1*? 
     

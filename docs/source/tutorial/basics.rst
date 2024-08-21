@@ -19,11 +19,11 @@ Process
 A process is an instance of a program in execution. A process is responsible for executing a program's 
 instructions and providing the environment in which the program operates (such as memory and I/O devices).
 
-#. Program Code: The instructions of the program that the process is executing.
-#. Process Stack: Contains temporary data such as method/function parameters, return addresses, and local variables.
-#. Heap: A region of memory used for dynamic memory allocation during the process's execution.
-#. Data Section: Contains global and static variables used by the process.
-#. Process Control Block (PCB): A data structure maintained by the operating system that holds information about the process, including its state, program counter, CPU registers, and memory management information.
+#. **Program Code**: The instructions of the program that the process is executing.
+#. **Process Stack**: Contains temporary data such as method/function parameters, return addresses, and local variables.
+#. **Heap**: A region of memory used for dynamic memory allocation during the process's execution.
+#. **Data Section**: Contains global and static variables used by the process.
+#. **Process Control Block (PCB)**: A data structure maintained by the operating system that holds information about the process, including its state, program counter, CPU registers, and memory management information.
 
 We can launch multiple process and the same time and the processes are isolated from each other.
 Each process manages its own resources, including memory and CPU time and one application can
@@ -51,9 +51,9 @@ they are *parallel*.
 Challenges with Threads
 ***********************
 
-#. Synchronization: As threads share resources, they need mechanisms to synchronize access to prevent conflicts and ensure data consistency. Common synchronization tools include mutexes, semaphores, and locks.
-#. Deadlock: A situation where two or more threads are waiting indefinitely for resources held by each other, leading to a standstill.
-#. Race Conditions: Occur when the outcome depends on the unpredictable timing of thread execution, potentially causing inconsistent results.
+#. **Synchronization**: As threads share resources, they need mechanisms to synchronize access to prevent conflicts and ensure data consistency. Common synchronization tools include mutexes, semaphores, and locks.
+#. **Deadlock**: A situation where two or more threads are waiting indefinitely for resources held by each other, leading to a standstill.
+#. **Race Conditions**: Occur when the outcome depends on the unpredictable timing of thread execution, potentially causing inconsistent results.
 
 
 Synchronization in programming is the coordination of concurrent threads or processes to ensure they operate 

@@ -1,39 +1,6 @@
 Getting Started
 ===============
 
-ssh into the Gadi system 
-
-.. code-block:: console
-    :linenos:
-
-    ssh <nci user name>@gadi.nci.org.au
-
-or you can use the Gadi terminal option `ARE <https://are.nci.org.au>`_.
-
-change directory to the project directory:
-
-.. code-block:: console
-    :linenos:
-
-    cd /scratch/vp91
-
-create a directory in your username:
-
-.. code-block:: console
-    :linenos:
-
-    mkdir $USER 
-    cd $USER 
-
-
-
-To clone the repository, use the following commands:
-
-.. code-block:: console
-    :linenos:
-
-    git clone https://github.com/NCI900-Training-Organisation/intro-to-parallel-programming.git
-    git checkout python-dev
 
 
 To access the Gadi system, follow these steps:
@@ -43,7 +10,7 @@ To access the Gadi system, follow these steps:
     .. code-block:: console
         :linenos:
 
-        ssh <nci user name>@gadi.nci.org.au
+        ssh <nci username>@gadi.nci.org.au
 
 
     Alternatively, you can use the Gadi terminal option at `ARE <https://are.nci.org.au>`_.
@@ -61,7 +28,7 @@ To access the Gadi system, follow these steps:
     .. code-block:: console
         :linenos:
 
-        mkdir $USER
+        mkdir -p $USER
         cd $USER
    
 
@@ -71,6 +38,7 @@ To access the Gadi system, follow these steps:
         :linenos:
 
         git clone https://github.com/NCI900-Training-Organisation/intro-to-parallel-programming.git
+        cd intro-to-parallel-programming
         git checkout python-dev
   
 

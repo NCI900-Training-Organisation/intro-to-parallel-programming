@@ -44,6 +44,7 @@ will be provided for you during the session.
 
 .. toctree::
 
+    tutorial/getting_started
     tutorial/basics
     tutorial/jobs
     tutorial/highlevel

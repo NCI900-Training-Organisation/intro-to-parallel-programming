@@ -1,0 +1,18 @@
+Broadcast from process 0:  [0 1 2 3 4]
+Broadcast received on process 0:  [0 1 2 3 4]
+Broadcast received on process 1:  [0 1 2 3 4]
+Broadcast received on process 2:  [0 1 2 3 4]
+Broadcast received on process 3:  [0 1 2 3 4]
+
+======================================================================================
+                  Resource Usage on 2024-06-27 10:03:29:
+   Job Id:             119220624.gadi-pbs
+   Project:            vp91
+   Exit Status:        0
+   Service Units:      0.11
+   NCPUs Requested:    48                     NCPUs Used: 48              
+                                           CPU Time Used: 00:00:03        
+   Memory Requested:   10.0GB                Memory Used: 1.19GB          
+   Walltime requested: 00:02:00            Walltime Used: 00:00:04        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================

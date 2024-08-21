@@ -1,0 +1,17 @@
+I am process 1
+I am process 2
+I am process 3
+I am process 0
+
+======================================================================================
+                  Resource Usage on 2024-06-18 16:07:26:
+   Job Id:             118598490.gadi-pbs
+   Project:            vp91
+   Exit Status:        0
+   Service Units:      0.11
+   NCPUs Requested:    48                     NCPUs Used: 48              
+                                           CPU Time Used: 00:00:03        
+   Memory Requested:   10.0GB                Memory Used: 1.13GB          
+   Walltime requested: 00:02:00            Walltime Used: 00:00:04        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================

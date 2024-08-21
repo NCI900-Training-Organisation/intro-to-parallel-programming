@@ -11,6 +11,7 @@ Prerequisite
 
 .. important::
     For a smooth setup on the supercomputer system, please register for an NCI account if you don't have one:
+    
     #. Go to https://my.nci.org.au/mancini
     #. Click on the "Sign up" button to start your registration form.
     #. Complete all steps in the registration form. (Note: you must provide a current email address from your institution or place of work, not a personal email.)

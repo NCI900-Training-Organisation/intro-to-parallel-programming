@@ -56,6 +56,31 @@ This results in each process having a complete view of the data from all process
 The MPI Allgather operation is useful for scenarios where every process needs to access or aggregate information 
 from all other processes, such as in parallel data processing and aggregation tasks.
 
+Exercise
+*********
+
+1. What distinguishes blocking MPI from non-blocking MPI? ?
+    
+.. code-block:: console
+    :linenos:
+    
+    qsub 6_mpi.pbs
+    qsub 7_mpi_nonBlocking.pbs
+
+2. How will you perform the broadcast from *Process 1*? 
+    
+.. code-block:: console
+    :linenos:
+    
+    qsub 8_mpi_bcast.pbs
+
+3. Can you aggregate the gathered values in *Process 0*?
+
+.. code-block:: console
+    :linenos:
+    
+    qsub 9_mpi_gpu.pbs
+
 .. admonition:: Key Points
    :class: hint
 

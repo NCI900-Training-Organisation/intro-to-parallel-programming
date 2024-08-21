@@ -36,7 +36,7 @@ We will use `Numba <https://numba.readthedocs.io/en/stable/>`_ to vectorize pyth
 Exercise
 *********
 
-How much speedup do ypu get from vectorization?
+How much speedup do you get from vectorization?
 
 .. code-block:: console
     :linenos:

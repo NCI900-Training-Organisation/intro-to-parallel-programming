@@ -10,7 +10,7 @@ To access the Gadi system, follow these steps:
     .. code-block:: console
         :linenos:
 
-        ssh <nci username>@gadi.nci.org.au
+        ssh -XY <nci username>@gadi.nci.org.au
 
 
     Alternatively, you can use the Gadi terminal option at `ARE <https://are.nci.org.au>`_.

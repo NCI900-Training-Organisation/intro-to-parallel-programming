@@ -11,18 +11,18 @@ If you are using a Windows machine please make sure you have a shell that suppor
 
 .. important::
  For a smooth setup on the supercomputer system, please register for an NCI account if you don't have one:
- 1.  Go to https://my.nci.org.au/mancini
- 2.  Click on the "Sign up" button to start your registration form.
- 3.  Complete all steps in the registration form. (Note: you must provide a current email address from your institution or place of work, not a personal email.)
- 4.  Select the option to join project vp91 at Step 3 of the form.
- 5.  Click "Finish" on the final page of the form to complete your registration request.
+ #. Go to https://my.nci.org.au/mancini
+ #. Click on the "Sign up" button to start your registration form.
+ #. Complete all steps in the registration form. (Note: you must provide a current email address from your institution or place of work, not a personal email.)
+ #. Select the option to join project vp91 at Step 3 of the form.
+ #. Click "Finish" on the final page of the form to complete your registration request.
 
  or 
 
  If you already have an account
- 1.  Login to your NCI account https://my.nci.org.au/mancini
- 2.  Select Project and Groups on the left-side menu
- 3.  Select Find project or group on the top tab and search vp91 to apply for membership
+ #. Login to your NCI account https://my.nci.org.au/mancini
+ #. Select Project and Groups on the left-side menu
+ #. Select Find project or group on the top tab and search vp91 to apply for membership
 
 
 .. warning::

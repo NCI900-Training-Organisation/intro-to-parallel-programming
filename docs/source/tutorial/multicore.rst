@@ -67,6 +67,7 @@ How does the multi-core performance vary from single core performance?
 
 .. code-block:: console
     :linenos:
+
     qsub 3_multi_core.pbs
 
 .. admonition:: Key Points

@@ -37,9 +37,10 @@ Exercise
 *********
 
 How much speedup do you get from vectorization?
-
+    
 .. code-block:: console
     :linenos:
+    
     qsub 2_vectorize.pbs
 
 

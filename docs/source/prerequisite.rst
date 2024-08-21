@@ -1,7 +1,7 @@
 Prerequisite
 ============
 
-.. important::
+.. note::
  1.  Experience with Python.
  2.  Experience with bash or similar Unix shells.
 

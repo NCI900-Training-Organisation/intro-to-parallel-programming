@@ -84,6 +84,27 @@ This allows another person to take the key and use the room.
 **Preventing Conflicts**: The lock ensures that only one person is in the room at any time. This prevents 
 conflicts or issues that might arise if multiple people were trying to use the room simultaneously.
 
+Exercise
+*********
+
+1. What occurs when locks aren't used??
+
+.. code-block:: console
+    :linenos:
+
+    module load python3/3.11.0
+    python3 threads.py
+
+2. How do threads differ from processes?
+
+.. code-block:: console
+    :linenos:
+
+    module load python3/3.11.0
+    python3 process.py
+
+
+
 .. admonition:: Key Points
    :class: hint
 

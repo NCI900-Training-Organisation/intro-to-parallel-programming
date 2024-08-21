@@ -17,4 +17,4 @@ module load openmpi/4.0.1
 
 . /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
 
-mpirun -np 4 python3 /scratch/vp91/$USER/intro-to-parallel-programming/python/src/8_mpi_bcast.py
+mpirun -np 4 python3 //scratch/vp91/$USER/intro-to-parallel-programming/python/src/mpi/mpi_bcast.py

@@ -18,4 +18,4 @@ module load cuda/12.3.2
 
 . /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
 
-python3 /scratch/vp91/$USER/intro-to-parallel-programming/python/src/4_gpu.py
+python3 /scratch/vp91/$USER/intro-to-parallel-programming/python/src/gpu/gpu.py

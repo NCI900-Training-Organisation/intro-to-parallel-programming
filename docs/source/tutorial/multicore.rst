@@ -12,7 +12,12 @@ Multi-core Parallelism
             #. Learn about NUMA regions. 
 
 Multi-core parallelism is a technique used to enhance computing performance by utilizing multiple processor 
-cores within a NUMA node or across NUMA nodes. 
+cores within a NUMA node or across NUMA nodes. It involves using multiple processing cores 
+within a CPU to perform different tasks or parts of a task simultaneously. Each core can execute its own 
+thread, allowing for more efficient processing and faster computation.
+
+A core is an individual processing unit within a CPU. Multi-core processors have multiple cores, each capable 
+of executing instructions independently.
 
 .. image:: ../figs/multicorePrallelism.drawio.png
 
@@ -54,6 +59,15 @@ the memory is divided into multiple regions, each associated with one or more pr
 fast access to its local memory region but slower access to memory nodes associated with other processors. 
 This creates a "non-uniform" access pattern compared to Uniform Memory Access (UMA) systems, where all memory 
 access times are the same regardless of the processor's location.
+
+Exercise
+*********
+
+How does the multi-core performance vary from single core performance?
+
+.. code-block:: console
+    :linenos:
+    qsub 3_multi_core.pbs
 
 .. admonition:: Key Points
    :class: hint

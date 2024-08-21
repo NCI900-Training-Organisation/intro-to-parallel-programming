@@ -16,4 +16,4 @@ module load papi/7.0.1
 
 . /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
 
-python3 /scratch/vp91/$USER/intro-to-parallel-programming/python/src/1_cache.py
+python3 /scratch/vp91/$USER/intro-to-parallel-programming/python/src/cache1_cache.py

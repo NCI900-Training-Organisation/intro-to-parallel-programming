@@ -85,6 +85,8 @@ diagnostics.
     module load papi/7.0.1
     lstopo
 
+A core is an individual processing unit within a CPU. *How many cores does the login node have?**
+
 How does cache influence performance?
 ************************************
 

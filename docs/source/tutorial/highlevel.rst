@@ -70,6 +70,21 @@ memory accesses and potential bottlenecks.
 Together, these cache levels balance speed and capacity to enhance CPU performance by minimizing data access 
 times.
 
+How do you figure out the node architecture?
+********************************************
+
+The `lstopo` command is part of the hwloc (Hardware Locality) toolset and provides a graphical or textual 
+representation of the hardware topology of a computer system. It visualizes the hierarchical structure of 
+CPUs, memory, caches, and other hardware components. You can use it to understand how hardware resources 
+are organized and how they relate to each other, which can be useful for performance optimization and system 
+diagnostics.
+
+.. code-block:: console
+    :linenos:
+
+    module load papi/7.0.1
+    lstopo
+
 How does cache influence performance?
 ************************************
 

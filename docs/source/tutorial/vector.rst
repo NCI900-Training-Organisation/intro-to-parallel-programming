@@ -10,8 +10,8 @@ Vector Parallelism
         **Objectives:**
             #. Learn about vector parallelism.
 
-Vector parallelism is a form of parallel computing that leverages the simultaneous processing of multiple data 
-elements using vector processors or SIMD (Single Instruction, Multiple Data) instructions. 
+Vectorization is a technique used in computer architecture and programming to enhance performance by processing 
+multiple data points with a single instruction - *SIMD (Single Instruction, Multiple Data) instructions*. 
 
 .. image::  ../figs/vectorPrallelism.drawio.png
 
@@ -19,12 +19,16 @@ elements using vector processors or SIMD (Single Instruction, Multiple Data) ins
 How does vectorization influence peformance?
 *******************************************
 
-Vector processors are specialized hardware designed to handle vector operations. Instead of processing single 
-data elements sequentially, they can operate on entire vectors (arrays of data) in parallel. The effectiveness 
-of vector parallelism depends on the *vector length*, which is the number of data elements a vector processor 
-can handle in parallel.
+Vector processors are specialized hardware designed to handle vector operations. 
 
-We will use **Numba** to vectorrize python code.
+**Increased Throughput**: By processing multiple data elements per instruction, vectorization can significantly 
+speed up computations.
+**Efficiency**: Reduces the number of instructions needed, leading to more efficient use of the CPU.
+
+The effectiveness of vector parallelism depends on the *vector length*, which is the number of data elements a 
+vector processor can handle in parallel.
+
+We will use `Numba <https://numba.readthedocs.io/en/stable/>`_ to vectorize python code.
 
 .. code-block:: console
     :linenos:

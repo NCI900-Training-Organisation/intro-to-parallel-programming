@@ -70,6 +70,8 @@ How does the multi-core performance vary from single core performance?
 
     qsub 3_multi_core.pbs
 
+How many NUMA regions dooes the compute node have: (hint: use lstopo command in 3_multi_core.pbs) 
+
 .. admonition:: Key Points
    :class: hint
 

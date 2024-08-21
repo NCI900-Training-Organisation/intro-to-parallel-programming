@@ -135,6 +135,24 @@ in one stream can proceed independently of tasks in another stream, leading to p
 executions. For example, while one stream is using data, another stream can be used to transfer new data 
 to the GPU, which helps in hiding the latency of data transfers.
 
+Exercise
+*********
+
+1. What speedup is achieved with GPU parallelism?
+    
+.. code-block:: console
+    :linenos:
+    
+    qsub 4_gpu.pbs
+
+2. Does using a separate stream affect GPU performance?
+
+.. code-block:: console
+    :linenos:
+    
+    qsub 5_gpu_streams.pbs
+    
+
 .. admonition:: Key Points
    :class: hint
 

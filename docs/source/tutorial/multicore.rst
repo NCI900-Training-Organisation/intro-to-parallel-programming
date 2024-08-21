@@ -63,14 +63,14 @@ access times are the same regardless of the processor's location.
 Exercise
 *********
 
-How does the multi-core performance vary from single core performance?
+1. How does performance with multiple cores compare to performance with a single core?
 
 .. code-block:: console
     :linenos:
 
     qsub 3_multi_core.pbs
 
-How many NUMA regions dooes the compute node have: (hint: use lstopo command in 3_multi_core.pbs) 
+2. How many NUMA regions does the compute node have? (Hint: You can find this information by using the `lstopo` command in the 3_multi_core.pbs script.)
 
 .. admonition:: Key Points
    :class: hint

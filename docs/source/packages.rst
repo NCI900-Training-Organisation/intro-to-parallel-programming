@@ -21,7 +21,7 @@ To get started with Python virtual environment load the Python module you want t
 .. code-block:: console
     :linenos:
 
-    module load python3/3.11.0
+    module load python3/3.11.0 cuda/12.3.2
 
 Create the Python virtual environment.
 

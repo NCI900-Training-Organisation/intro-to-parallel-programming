@@ -8,7 +8,7 @@ Requesting a Job
     * **Exercises:** 5 min
 
         **Objectives:**
-            #. Learn how to write a PBS job script in Gadi.
+            #. Learn how to write a PBS job script for Gadi.
             #. Learn how to launch a job in Gadi.
 
 1.  Which project are you using?
@@ -25,7 +25,7 @@ Requesting a Job
 
     #!/bin/bash
 
-    #PBS -P vp91
+    #PBS -P vp91 
     #PBS -q normal
     #PBS -l ncpus=48
     #PBS -l mem=10GB
@@ -39,18 +39,42 @@ Requesting a Job
 
     which python
 
-* **P** - Gadi project (sometimes called account) used
-* **q** - Gadi queue to use
-* **ncpus** - Total number of cores requested
-* **ngpus** - Total number of GPUs requested
-* **mem** - Total memory requested
-* **l** - Total wall time for which the resources are provisioned
-* **N** - Name of the job 
+#. **P** - Gadi project (sometimes called account) to use
+#. **q** - Gadi queue to use
+#. **ncpus** - Total number of cores requested
+#. **ngpus** - Total number of GPUs requested
+#. **mem** - Total memory requested
+#. **l** - Total wall time for which the resources are provisioned
+#. **N** - Name of the job 
+
+Here's an example job script for submitting a job to the `normal` queue, requesting only CPUs and no GPUs:
+
+.. code-block:: console
+    :linenos:
+
+    #!/bin/bash
+
+    #PBS -P vp91
+    #PBS -q normal
+    #PBS -l ncpus=48
+    #PBS -l mem=10GB
+    #PBS -l walltime=00:02:00 
+    #PBS -N testScript
+
+    module load python3/3.11.0
+    module load papi/7.0.1
+
+    . /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
+
+    which python
+    papi_avail
+
 
 For more PBS Directives please check the `Gadi document <https://opus.nci.org.au/display/Help/PBS+Directives+Explained>`_ and for more details on the 
 different Gadi queues please check out the corresponding `Gadi document <https://opus.nci.org.au/display/Help/Queue+Structure>`_ .
 
-All the Python code are available in the directory python/src while all the job scripts are available in the directory. To submit a job use 
+All the Python code are available in the directory `python/src`` while all the job scripts are available in the 
+directory `python/jobScripts`. To submit a job use 
 the command
 
 .. code-block:: console
@@ -65,7 +89,7 @@ and to know the status of your job use the command
 
     qstat <jobid>
 
-To know get the details of the nodes allocated use the command
+To know get the details about the job use the command
 
 .. code-block:: console
     :linenos:

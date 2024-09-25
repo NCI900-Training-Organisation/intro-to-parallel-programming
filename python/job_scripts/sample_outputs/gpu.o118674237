@@ -1,0 +1,23 @@
+
+***** Simple Computations *****
+CPU time without cuda: 83 ms
+Kernel time with cuda: 1804.454345703125 ms
+
+***** Large Computations *****
+CPU time without cuda: 7404 ms
+Kernel time with cuda: 927.996826171875 ms
+
+======================================================================================
+                  Resource Usage on 2024-06-19 16:23:58:
+   Job Id:             118674237.gadi-pbs
+   Project:            vp91
+   Exit Status:        0
+   Service Units:      0.36
+   NCPUs Requested:    12                     NCPUs Used: 12              
+                                           CPU Time Used: 00:00:18        
+   Memory Requested:   10.0GB                Memory Used: 327.32MB        
+   NGPUs Requested:    1                 GPU Utilisation: 0%              
+                                         GPU Memory Used: 324.0MB         
+   Walltime requested: 00:05:00            Walltime Used: 00:00:36        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================

@@ -53,10 +53,10 @@ if __name__ == "__main__":
     lock = threading.Lock()
     
     # launch the threads
-    adder = threading.Thread(target=thread_kernel_add, args=(1, 1000000, 100) ) # adder threads
+    adder = threading.Thread(target=thread_kernel_add, args=(1, 1000, 100) ) # adder threads
     adder.start()
     
-    subtractor = threading.Thread(target=thread_kernel_sub, args=(2, 1000000, 100) ) # subtractor threads
+    subtractor = threading.Thread(target=thread_kernel_sub, args=(2, 1000, 100) ) # subtractor threads
     subtractor.start()
     
     adder.join()

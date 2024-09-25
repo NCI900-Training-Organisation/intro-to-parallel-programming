@@ -75,10 +75,7 @@ To know get the details about the job use the command
     qstat -swx <jobid>
 
 
-Interactive Jobs
-********************
-
- An interactive job allows you to interact directly with the HPC system and the job while it's 
+**Interactive Jobs:** An interactive job allows you to interact directly with the HPC system and the job while it's 
  running. This means you have a command-line shell (e.g., terminal) on the compute node where you 
  can run commands in real-time.
 

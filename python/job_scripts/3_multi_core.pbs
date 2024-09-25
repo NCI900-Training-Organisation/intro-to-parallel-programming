@@ -7,7 +7,7 @@
 #PBS -l mem=10GB
 #PBS -l walltime=00:02:00 
 
-#PBS -N parallel
+#PBS -N multicore
 
 
 

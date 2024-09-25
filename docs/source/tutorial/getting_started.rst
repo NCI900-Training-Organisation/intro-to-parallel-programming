@@ -39,8 +39,6 @@ To access the Gadi system, follow these steps:
 
         git clone https://github.com/NCI900-Training-Organisation/intro-to-parallel-programming.git
         cd intro-to-parallel-programming
-        git checkout python-dev
-  
 
 
 In the repository:

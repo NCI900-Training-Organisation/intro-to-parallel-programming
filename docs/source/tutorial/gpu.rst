@@ -15,7 +15,7 @@ GPU Parallelism
             #. Learn about data movements in GPUs.
 
 Gadi only has NVIDIA GPUs. So when we say GPUs we mean NVIDIA GPUs. Nevertheless, many concepts discussed here 
-are the same across different vendors_. While the CPU is optimized to do a single operation as fast as it 
+are the same across different vendors. While the CPU is optimized to do a single operation as fast as it 
 can (low latency operation), the GPU is optimized to do a large number of slow operations (high throughput 
 operation). GPUs are composed of multiple Streaming Multiprocessors (SMs), an on-chip L2 cache, and 
 high-bandwidth DRAM. The SMs execute operations and the data and code are accessed from DRAM through the L2 cache.

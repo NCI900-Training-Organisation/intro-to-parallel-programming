@@ -12,15 +12,15 @@ will be provided for you during the session.
     - Material
     - Exercises
     - Duration
-  * - Basic of Parallelism
-    - 20 minutes
-    - 15 minutes
-    - 35 minutes
   * - Requesting a Job
     - 10 minutes
     - 10 minutes
     - 20 minutes
   * - High-level HPC Architecture
+    - 20 minutes
+    - 15 minutes
+    - 35 minutes
+  * - Basic of Parallelism
     - 20 minutes
     - 15 minutes
     - 35 minutes
@@ -45,9 +45,9 @@ will be provided for you during the session.
 .. toctree::
 
     tutorial/getting_started
-    tutorial/basics
     tutorial/jobs
     tutorial/highlevel
+    tutorial/basics
     tutorial/vector
     tutorial/multicore
     tutorial/gpu

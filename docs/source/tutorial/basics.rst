@@ -56,7 +56,7 @@ Challenges with Threads
 #. **Race Conditions**: Occur when the outcome depends on the unpredictable timing of thread execution, potentially causing inconsistent results.
 
 
-Synchronization in programming is the coordination of concurrent threads or processes to ensure they operate 
+**Synchronization** in programming is the coordination of concurrent threads or processes to ensure they operate 
 correctly when accessing shared resources. It prevents issues such as race conditions and data corruption by 
 managing access to shared resources, ensuring that only one thread or process can modify the resource at a time. 
 Synchronization mechanisms, like locks, semaphores, and mutexes, help maintain consistency and order in a 

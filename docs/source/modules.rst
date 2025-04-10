@@ -4,8 +4,8 @@ Modules
 .. note::
  1.  python3/3.11.0
  2.  papi/7.0.1
- 3.  openmpi/4.0.1
- 4.  cuda/12.3.2
+ 3.  cuda/12.3.2
+ 4.  openmpi/4.1.7
 
 Modules are how we manage software in most HPC machines. We can see all the available modules using the command
 

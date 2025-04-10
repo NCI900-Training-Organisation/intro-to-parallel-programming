@@ -6,15 +6,16 @@ from codetiming import Timer
 
 @Timer(name="without_vectorization", text="CPU time (without vectorization): {milliseconds:.0f} ms")
 def without_vectorization(a: float, b: float) -> float:
-    return np.cos(np.sqrt(a**2 + b**2) + 100 + np.sin(b))
+    return np.add(a, b) 
 
 @Timer(name="with_vectorization", text="CPU time (with vectorization): {milliseconds:.0f} ms")
 @vectorize([float64(float64, float64)]) 
 def with_vectorization(a: float, b: float) -> float:
-    return np.cos(np.sqrt(a**2 + b**2) + 100 + np.sin(b))
+    return np.add(a, b) 
 
-a = np.array([n for n in range(10_000_000)])
-b = np.array([n for n in range(10_000_000)])
+N = 4_000_000
+a = np.array([n for n in range(N)])
+b = np.array([n for n in range(N)])
 
 without_vectorization(a, b)
 

@@ -104,6 +104,23 @@ Exercise
     python3 process.py
 
 
+Single Instruction Multiple Data (SIMD)
+***************************************
+
+.. image:: ../figs/simd.drawio.png
+
+
+- **SISD** (Single Instruction, Single Data) means one processor runs one instruction on one piece of data at a time — like a single person doing one task.
+
+- **SIMD** (Single Instruction, Multiple Data) means one instruction is applied to many data items at once — like one person doing the same task to many items simultaneously (e.g., stamping multiple papers in one go).
+
+- **MIMD** (Multiple Instruction, Multiple Data) means multiple processors work independently, each running its own instructions on different data — like a team where everyone is doing different tasks on different things.
+
+We will focus on SIMD-based parallelism in this tutorial.
+
+
+
+
 
 .. admonition:: Key Points
    :class: hint
